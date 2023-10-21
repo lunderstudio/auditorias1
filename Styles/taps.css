@@ -1,10 +1,20 @@
 /* Style the tab */
-.tab {
+.tap-panel {
   overflow: hidden;
+  /* background-color: #ccc; */
+}
+
+.tab-buttons {
+  float: left;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+  /* background-color: #ccc; */
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab-button {
+.formatt-button {
   background-color: inherit;
   float: left;
   border: none;
@@ -16,26 +26,35 @@
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab-buttons button:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab-buttons button.active {
   background-color: #ccc;
 }
 
+/* Style Tap Dropdown  */
+.tab-dropdown {
+  float: left;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Style Dropdawn */
+.tab-dropdown .dropdown {
+  position: inherit;
+}
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
   border-top: none;
-}
-
-.tabcontent {
   animation: fadeEffect 1s;
-  /* Fading effect takes 1 second */
 }
 
 /* Go from zero to full opacity */

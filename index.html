@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="Styles/body.css?v=002">
 <link rel="stylesheet" href="Styles/taps.css">
 
+<!-- 08070 Contenedor del titulo y descripcion -->
 <div class="container-fluid">
     <div class="card background-lunder">
         <div class="card-body">
@@ -31,36 +32,97 @@
     </div>
 </div>
 
+<!-- 08070 Contenedor del panel de mapa y de indicadores -->
 <div class="container-fluid">
+    <div class="">
+        <div class="row">
+            <!-- Columna para le mapa y puntos -->
+            <div class="col-md-8">
+                <!-- Tab links -->
+                <div class="tap-panel">
+                    <!-- tab button formato -->
+                    <div class="tab-buttons">
+                        <div class="text-center">
+                            <label>Formato</label>
+                        </div>
+                        <button class="tablinks formatt-button" onclick="openCity(event, 'Paris')" id="defaultOpen">
+                            <img class="icon-color" src="src/iconizer-menu-button-wide-fill.svg" alt="">
+                        </button>
+                        <button class="tablinks formatt-button" onclick="openCity(event, 'London')">
+                            <img src="src/iconizer-map.svg" alt="">
+                        </button>
+                    </div>
+                    <!-- Tap Dropdown Edicion -->
+                    <div class="tab-dropdown">
+                        <div class="text-center">
+                            <label>Edición</label>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tap Dropdown Dimension -->
+                    <div class="tab-dropdown">
+                        <div class="text-center">
+                            <label>Dimensión</label>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Tab links -->
-    <div class="tab">
-        <div></div>
-        <div class="">
-            <label>Formato</label>
+                </div>
+
+                <!-- Tab content -->
+                <div id="London" class="tabcontent">
+                    <h3>London</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+                <div id="Paris" class="tabcontent">
+                    <h3>Paris</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Columna de indicadores -->
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <button class="tablinks tab-button" onclick="openCity(event, 'Paris')" id="defaultOpen">
-            <img class="icon-color" src="src/iconizer-menu-button-wide-fill.svg" alt="">
-        </button>
-        <button class="tablinks tab-button" onclick="openCity(event, 'London')">
-            <img src="src/iconizer-map.svg" alt="">
-        </button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-    </div>
-
-    <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
     </div>
 </div>
 

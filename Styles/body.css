@@ -1,0 +1,24 @@
+body {
+    background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.background-lunder {
+    background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+}
+
+.title-card {
+    color: rgba(255, 255, 255, 1);
+    font-family: Fira Sans;
+    text-align: left;
+    font-size: 32px;
+    letter-spacing: -2 ;
+}
+
+.subtitle-card {
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto ;
+    text-align: left;
+    font-size: 20px ;
+    letter-spacing: 0 ;
+}

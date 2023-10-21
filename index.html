@@ -18,6 +18,7 @@
 <!-- Styles -->
 <link rel="stylesheet" href="Styles/body.css?v=002">
 <link rel="stylesheet" href="Styles/taps.css">
+<link rel="stylesheet" href="Styles/taps-evaluaciones.css">
 
 <!-- 08070 Contenedor del titulo y descripcion -->
 <div class="container-fluid">
@@ -38,6 +39,7 @@
         <div class="row">
             <!-- Columna para le mapa y puntos -->
             <div class="col-md-8">
+
                 <!-- Tab links -->
                 <div class="tap-panel">
                     <!-- tab button formato -->
@@ -45,10 +47,11 @@
                         <div class="text-center">
                             <label>Formato</label>
                         </div>
-                        <button class="tablinks formatt-button" onclick="openCity(event, 'Paris')" id="defaultOpen">
+                        <button class="tablinks formatt-button" onclick="selectFormat(event, 'vista-tabla')"
+                            id="defaultOpen">
                             <img class="icon-color" src="src/iconizer-menu-button-wide-fill.svg" alt="">
                         </button>
-                        <button class="tablinks formatt-button" onclick="openCity(event, 'London')">
+                        <button class="tablinks formatt-button" onclick="selectFormat(event, 'vista-mapa')">
                             <img src="src/iconizer-map.svg" alt="">
                         </button>
                     </div>
@@ -90,11 +93,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <!-- Tab content -->
-                <div id="London" class="tabcontent">
+                <div id="vista-tabla" class="tabcontent">
                     <h3>London</h3>
                     <div class="card">
                         <div class="card-body">
@@ -102,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="Paris" class="tabcontent">
+                <div id="vista-mapa" class="tabcontent">
                     <h3>Paris</h3>
                     <div class="card">
                         <div class="card-body">
@@ -112,15 +113,74 @@
                 </div>
 
             </div>
+
             <!-- Columna de indicadores -->
             <div class="col-md-4">
 
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
+                <!-- Tab content -->
+                <div id="vista-evaluacion" class="tabcontent-indi">
+                    <div class="card background-lunder">
+                        <div class="">
+                            <div class="div-panel-evaluacion">
+                                <div class="div-datos">
+                                    <p class="div-nom-estado">Aguascalientes</p>
+                                </div>
+                                <div class="div-datos">
+                                    <span class="subtitle-text">Dimensión</span>
+                                    <p class="info-text">Planeación de las auditorías</p>
+                                </div>
+                                <div class="div-datos">
+                                    <span class="subtitle-text">Nivel de Planeación</span>
+                                    <p class="info-text">Aceptable</p>
+                                </div>
+                                <div class="div-datos">
+                                    <p class="info-descripcion">Esta dimensión se refiere a los principales elementos
+                                        identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
+                                        (referente al ejercicio fiscal 2021). </p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+                <div id="vista-resumen" class="tabcontent-indi">
+                    <div class="card background-lunder">
+                        <div class="">
+                            <div class="div-panel-evaluacion">
+                                <div class="div-datos">
+                                    <p class="div-nom-estado">Aguascalientes</p>
+                                </div>
+                                <div class="div-datos">
+                                    <span class="subtitle-text">Dimensión</span>
+                                    <p class="info-text">Planeación de las auditorías</p>
+                                </div>
+                                <div class="div-datos">
+                                    <span class="subtitle-text">Nivel de Planeación</span>
+                                    <p class="info-text">Aceptable</p>
+                                </div>
+                                <div class="div-datos">
+                                    <p class="info-descripcion">Esta dimensión se refiere a los principales elementos
+                                        identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
+                                        (referente al ejercicio fiscal 2021). </p>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab links -->
+                <div class="tap-panel-indi">
+                    <!-- tab button formato -->
+                    <div class="tab-buttons-indi">
+                        <button class="tablinks-indi formatt-button-indi"
+                            onclick="selectVista(event, 'vista-evaluacion')" id="defaultOpen-indi">
+                            Ver evaluación
+                        </button>
+                        <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-resumen')">
+                            Ver resumen
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

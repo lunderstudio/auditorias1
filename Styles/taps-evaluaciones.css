@@ -1,0 +1,91 @@
+/* Style the tab */
+.tap-panel-indi {
+    overflow: hidden;
+    /* background-color: #ccc; */
+}
+
+.tab-buttons-indi {
+    float: left;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: #ccc; */
+}
+
+/* Style the buttons that are used to open the tab content */
+.formatt-button-indi {
+    background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+/* Change background color of buttons on hover */
+.tab-buttons-indi button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab-buttons-indi button.active {
+    background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
+}
+
+/* Style the tab content */
+.tabcontent-indi {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    animation: fadeEffect 1s;
+}
+
+/* Style Vista Evalaucion */
+.div-datos {
+    height: 60px;
+}
+
+.div-nom-estado {
+    color: rgba(255, 255, 255, 1);
+    font-family: Fira Sans;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.subtitle-text{
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 16px;
+    
+}
+
+.info-text{
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 16px;
+}
+
+.info-descripcion{
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 16px;
+}
+
+.div-panel-evaluacion {
+    border-style: solid;
+    border-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1) !important;
+    border-width: thin;
+    height: 392px;    
+}

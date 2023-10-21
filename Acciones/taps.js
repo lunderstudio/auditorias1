@@ -1,4 +1,5 @@
-function openCity(evt, cityName) {
+// Func Tap Control Formato
+function selectFormat(evt, format) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -15,8 +16,32 @@ function openCity(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(format).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
 document.getElementById("defaultOpen").click();
+
+// Funct Tap Control Vista (evaluacion o resumen)
+function selectVista(evt, vista) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent-indi");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks-indi");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(vista).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen-indi").click();

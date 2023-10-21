@@ -1,9 +1,8 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Datos -->
 <script src="Datos/Ediciones.js"></script>
@@ -15,23 +14,118 @@
 
 <!-- Acciones -->
 <script src="Acciones/test.js"></script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="Styles/body.css?v=002">
+<link rel="stylesheet" href="Styles/taps.css">
+
+<!-- 08070 Contenedor del titulo y descripcion -->
 <div class="container-fluid">
-    
-    <div class="row">
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Action
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
+    <div class="card background-lunder">
+        <div class="card-body">
+            <p class="title-card">Clasificación de las Entidades Superiores de Fiscalización según sus avances</p>
+            <p class="subtitle-card">Se utilizó un análisis de conglomerados para evaluar las ESF y categorizarlas en
+                tres grupos: las más avanzadas, las que están en un punto intermedio y las que han progresado menos. Las
+                ESFL de mayor puntuación no necesariamente cumplen con todas las capacidades requeridas, simplemente
+                muestran un mayor desarrollo en comparación con las demás.</p>
         </div>
     </div>
 </div>
+
+<!-- 08070 Contenedor del panel de mapa y de indicadores -->
+<div class="container-fluid">
+    <div class="">
+        <div class="row">
+            <!-- Columna para le mapa y puntos -->
+            <div class="col-md-8">
+                <!-- Tab links -->
+                <div class="tap-panel">
+                    <!-- tab button formato -->
+                    <div class="tab-buttons">
+                        <div class="text-center">
+                            <label>Formato</label>
+                        </div>
+                        <button class="tablinks formatt-button" onclick="openCity(event, 'Paris')" id="defaultOpen">
+                            <img class="icon-color" src="src/iconizer-menu-button-wide-fill.svg" alt="">
+                        </button>
+                        <button class="tablinks formatt-button" onclick="openCity(event, 'London')">
+                            <img src="src/iconizer-map.svg" alt="">
+                        </button>
+                    </div>
+                    <!-- Tap Dropdown Edicion -->
+                    <div class="tab-dropdown">
+                        <div class="text-center">
+                            <label>Edición</label>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tap Dropdown Dimension -->
+                    <div class="tab-dropdown">
+                        <div class="text-center">
+                            <label>Dimensión</label>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tab content -->
+                <div id="London" class="tabcontent">
+                    <h3>London</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+                <div id="Paris" class="tabcontent">
+                    <h3>Paris</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Columna de indicadores -->
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <script src="Acciones/taps.js"></script>
+</footer>

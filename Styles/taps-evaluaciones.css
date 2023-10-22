@@ -42,10 +42,19 @@
     padding: 6px 12px;
     border-top: none;
     animation: fadeEffect 1s;
+    padding-bottom: 0;
 }
 
-/* Style Vista Evalaucion */
-.div-datos {
+.div-card-info {
+    border-style: solid;
+    border-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1) !important;
+    border-width: medium;
+    height: 392px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Style Vista REsumen */
+.div-datos-resumen {
     height: 60px;
 }
 
@@ -58,16 +67,16 @@
     padding-top: 16px;
 }
 
-.subtitle-text{
+.subtitle-text {
     color: rgba(255, 255, 255, 1);
     font-family: Roboto;
     text-align: left;
     font-size: 12px;
     padding-left: 16px;
-    
+
 }
 
-.info-text{
+.info-text {
     color: rgba(255, 255, 255, 1);
     font-family: Roboto;
     text-align: left;
@@ -75,7 +84,7 @@
     padding-left: 16px;
 }
 
-.info-descripcion{
+.info-descripcion {
     color: rgba(255, 255, 255, 1);
     font-family: Roboto;
     text-align: left;
@@ -83,9 +92,55 @@
     padding-left: 16px;
 }
 
-.div-panel-evaluacion {
+/* Style Vista Evalaucion */
+.div-datos-evaluacion {
     border-style: solid;
     border-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1) !important;
     border-width: thin;
-    height: 392px;    
+    padding: 16px;
+    
+}
+
+.div-estado-evaluacion {
+    font-family: Fira Sans;
+    text-align: left;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.div-pregunta-evaluacion {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
+    margin: 0px;
+}
+
+.div-respuesta-evaluacion {
+    font-family: Roboto;
+    font-size: 16px;
+    text-align: left;
+    color: rgba(200, 204, 204, 1);;
+    margin: 0px;
+}
+
+.div-buttons-fichas{
+    padding-top: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.btn-descarga {
+    background-color: rgba(63.000000044703484, 51.00000075995922, 198.00000339746475, 1);
+    font-family: Roboto;
+    font-size: 16px;
+    color: white;
+    border-radius: 0px;
+}
+
+.btn-fichas {
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    border-radius: 0px;
 }

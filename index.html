@@ -116,69 +116,67 @@
 
             <!-- Columna de indicadores -->
             <div class="col-md-4">
-
-                <!-- Tab content -->
-                <div id="vista-evaluacion" class="tabcontent-indi">
-                    <div class="card background-lunder">
-                        <div class="">
-                            <div class="div-panel-evaluacion">
-                                <div class="div-datos">
-                                    <p class="div-nom-estado">Aguascalientes</p>
-                                </div>
-                                <div class="div-datos">
-                                    <span class="subtitle-text">Dimensión</span>
-                                    <p class="info-text">Planeación de las auditorías</p>
-                                </div>
-                                <div class="div-datos">
-                                    <span class="subtitle-text">Nivel de Planeación</span>
-                                    <p class="info-text">Aceptable</p>
-                                </div>
-                                <div class="div-datos">
-                                    <p class="info-descripcion">Esta dimensión se refiere a los principales elementos
-                                        identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
-                                        (referente al ejercicio fiscal 2021). </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div id="vista-resumen" class="tabcontent-indi">
-                    <div class="card background-lunder">
-                        <div class="">
-                            <div class="div-panel-evaluacion">
-                                <div class="div-datos">
-                                    <p class="div-nom-estado">Aguascalientes</p>
-                                </div>
-                                <div class="div-datos">
-                                    <span class="subtitle-text">Dimensión</span>
-                                    <p class="info-text">Planeación de las auditorías</p>
-                                </div>
-                                <div class="div-datos">
-                                    <span class="subtitle-text">Nivel de Planeación</span>
-                                    <p class="info-text">Aceptable</p>
-                                </div>
-                                <div class="div-datos">
-                                    <p class="info-descripcion">Esta dimensión se refiere a los principales elementos
-                                        identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
-                                        (referente al ejercicio fiscal 2021). </p>
+                <div>
+                    <!-- Tab Content Resumen -->
+                    <div id="vista-resumen" class="tabcontent-indi">
+                        <div class="card background-lunder">
+                            <div class="">
+                                <div class="div-card-info">
+                                    <div class="div-datos-resumen">
+                                        <p class="div-nom-estado">Aguascalientes Resumen</p>
+                                    </div>
+                                    <div class="div-datos-resumen">
+                                        <span class="subtitle-text">Dimensión</span>
+                                        <p class="info-text">Planeación de las auditorías</p>
+                                    </div>
+                                    <div class="div-datos-resumen">
+                                        <span class="subtitle-text">Nivel de Planeación</span>
+                                        <p class="info-text">Aceptable</p>
+                                    </div>
+                                    <div class="div-datos-resumen">
+                                        <p class="info-descripcion">Esta dimensión se refiere a los principales
+                                            elementos
+                                            identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
+                                            (referente al ejercicio fiscal 2021). </p>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    <!-- Tab content evaluacion -->
+                    <div id="vista-evaluacion" class="tabcontent-indi">
+                        <div class="card background-lunder">
+            
+                            <div class="div-card-info overflow-auto">
+                                <div class="div-datos-evaluacion">
+                                    <p class="div-estado-evaluacion">Aguascalientes</p>
+                                </div>
+                                <div class="div-datos-evaluacion">
+                                    <p class="div-pregunta-evaluacion">¿Cuenta con un Programa Anual de Auditorías?</p>
+                                    <p class="div-respuesta-evaluacion">Sí</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab links -->
+                    <div class="tap-panel-indi">
+                        <!-- tab button formato -->
+                        <div class="tab-buttons-indi">
+                            <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-evaluacion')"
+                                id="defaultOpen-indi">
+                                Ver evaluación
+                            </button>
+                            <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-resumen')">
+                                Ver resumen
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <!-- Tab links -->
-                <div class="tap-panel-indi">
-                    <!-- tab button formato -->
-                    <div class="tab-buttons-indi">
-                        <button class="tablinks-indi formatt-button-indi"
-                            onclick="selectVista(event, 'vista-evaluacion')" id="defaultOpen-indi">
-                            Ver evaluación
-                        </button>
-                        <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-resumen')">
-                            Ver resumen
-                        </button>
+                <div class="div-buttons-fichas">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-descarga" type="button">Descargar ficha</button>
+                        <button class="btn btn-fichas" type="button">Ver todas las fichas</button>
                     </div>
                 </div>
             </div>

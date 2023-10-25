@@ -128,6 +128,7 @@ function select_dimencion(data) {
   var _idDimension = data.getAttribute("data-idDimension");
 
   fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension);
+  fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension);
 }
 
 function fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension) {
@@ -143,3 +144,40 @@ function fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension) {
   $("#resumen_avance_dimension").text(_idAvance);
   $("#resumen_desc_dimension").text(_dimension_desc);
 }
+
+function fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension) {
+  var _estado = DatosEstados.find((id) => id.IdEstado === _idEstado).Estado;
+  var _datos_indicadores = DatosIndicadores.filter(
+    (data) => data.IdDimension === _idDimension
+  );
+  var _titulo_indicador = "";
+  var _respuesta;
+
+  $("#resultados_evaluacion").html("");
+  _datos_indicadores.forEach((element, index) => {
+    var _indicador = "Indicador" + (index + 1);
+    _titulo_indicador = element.TítuloIndicador;
+    _respuesta = DatosResultados.find(
+      (x) =>
+        x.IdEdicion == _idEdicion &&
+        x.IdDimension == _idDimension &&
+        x.IdEstado == _idEstado
+    );
+
+    $("#evaluacion_estdo").text(_estado);
+    var _evaluaciones =
+      `
+    <div class="div-datos-evaluacion">
+      <p class="div-pregunta-evaluacion">` +
+      _titulo_indicador +
+      `</p>
+      <p class="div-respuesta-evaluacion">` +
+      _respuesta[_indicador] +
+      `</p>
+    </div>`;
+    $("#resultados_evaluacion").append(_evaluaciones);
+  });
+}
+
+fill_card_evaluacion('1','1','Incipiente','1');
+fill_card_resumen('1','1','Incipiente','1');

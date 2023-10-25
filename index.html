@@ -12,9 +12,6 @@
 <script src="Datos/AvanceDimensiones.js"></script>
 <script src="Datos/Resultados.js"></script>
 
-<!-- Acciones -->
-<script src="Acciones/test.js"></script>
-
 <!-- Styles -->
 <link rel="stylesheet" href="Styles/body.css?v=002">
 <link rel="stylesheet" href="Styles/taps.css">
@@ -162,21 +159,18 @@
                             <div class="">
                                 <div class="div-card-info">
                                     <div class="div-datos-resumen">
-                                        <p class="div-nom-estado">Aguascalientes Resumen</p>
+                                        <p  id="resumen_estado" class="div-nom-estado"></p>
                                     </div>
                                     <div class="div-datos-resumen">
                                         <span class="subtitle-text">Dimensión</span>
-                                        <p class="info-text">Planeación de las auditorías</p>
+                                        <p id="resumen_titulo_dimension" class="info-text"></p>
                                     </div>
                                     <div class="div-datos-resumen">
                                         <span class="subtitle-text">Nivel de Planeación</span>
-                                        <p class="info-text">Aceptable</p>
+                                        <p id="resumen_avance_dimension" class="info-text"></p>
                                     </div>
                                     <div class="div-datos-resumen">
-                                        <p class="info-descripcion">Esta dimensión se refiere a los principales
-                                            elementos
-                                            identificados en el Informe de Auditorías de acuerdo con el PAA de 2022
-                                            (referente al ejercicio fiscal 2021). </p>
+                                        <p id="resumen_desc_dimension" class="info-descripcion"></p>
                                     </div>
                                 </div>
                             </div>
@@ -203,12 +197,12 @@
                         <!-- tab button formato -->
                         <div class="tab-buttons-indi">
                             <button class="tablinks-indi formatt-button-indi"
-                                onclick="selectVista(event, 'vista-evaluacion')" id="defaultOpen-indi">
-                                Ver evaluación
+                                onclick="selectVista(event, 'vista-resumen')" id="defaultOpen-indi">
+                                Ver resumen
                             </button>
                             <button class="tablinks-indi formatt-button-indi"
-                                onclick="selectVista(event, 'vista-resumen')">
-                                Ver resumen
+                                onclick="selectVista(event, 'vista-evaluacion')">
+                                Ver evaluación
                             </button>
                         </div>
                     </div>

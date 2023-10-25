@@ -49,7 +49,6 @@ function selectVista(evt, vista) {
 document.getElementById("defaultOpen-indi").click();
 
 function dropdawn_element(format) {
-  console.log(format);
   if (format === "vista-tabla") {
     document.getElementById("dropdawn-ordenamiento").style.display = "block";
     document.getElementById("dropdawn-dimension").style.display = "none";

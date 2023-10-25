@@ -67,3 +67,51 @@
     opacity: 1;
   }
 }
+
+/* Estilo dropdawns */
+.drop-edicion button{
+  background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+  color: white;
+  border-radius: 0;
+  width: 149px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+
+.select-edicion{
+  background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+  color: white;
+  border-radius: 0;
+  border: none;
+  width: 149px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+
+.select-dimension{
+  background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+  color: white;
+  border-radius: 0;
+  border: none;
+  width: 467px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+
+.select-ordenamiento{
+  background-color: rgba(20.000000707805157, 15.000000055879354, 78.00000295042992, 1);
+  color: white;
+  border-radius: 0;
+  border: none;
+  width: 467px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}

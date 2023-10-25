@@ -49,8 +49,33 @@
                             <label>Edición</label>
                         </div>
                         <div>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                            <select class="select-edicion"> 
+                                <option value="free" selected>Primera</option>
+                            </select> 
+
+                            <!-- <div class="dropdown drop-edicion">
+                                <button class="btn dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ediciones
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Primera</a></li>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Tap Dropdown Ordenamiento -->
+                    <div id="dropdawn-ordenamiento" class="tab-dropdown">
+                        <div class="text-center">
+                            <label>Ordenar estados</label>
+                        </div>
+                        <div>
+                            <select class="select-ordenamiento"> 
+                                <option value="AZ" selected>Alfabéticamente (A-Z)</option>
+                                <option value="mayor-menor">De mayor avance a menor avance</option>
+                                <option value="menor-mayor">De menor avance a mayor avance</option>
+                            </select> 
+                            <!-- <div class="dropdown drop-dimension">
+                                <button class="btn dropdown-toggle" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown button
                                 </button>
@@ -59,17 +84,20 @@
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Tap Dropdown Dimension -->
-                    <div class="tab-dropdown">
+                    <div id="dropdawn-dimension" class="tab-dropdown">
                         <div class="text-center">
                             <label>Dimensión</label>
                         </div>
                         <div>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                            <select class="select-dimension"> 
+                                <option value="free" selected>Planeación de las auditorías</option>
+                            </select> 
+                            <!-- <div class="dropdown drop-dimension">
+                                <button class="btn dropdown-toggle" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown button
                                 </button>
@@ -78,9 +106,10 @@
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
+                    
                 </div>
                 <!-- Tab content -->
                 <div id="vista-tabla" class="tabcontent">
@@ -88,25 +117,29 @@
                         <div class="panel-tabla overflow-auto">
                             <table class="">
                                 <thead>
-                                   <tr>
-                                       <th class="tb-hd-estado">Estado</th>
-                                       <th class="tb-hd-dimension">1</th>
-                                       <th class="tb-hd-dimension">2</th>
-                                       <th class="tb-hd-dimension">3</th>
-                                       <th class="tb-hd-dimension">4</th>
-                                       <th class="tb-hd-dimension">5</th>
-                                       <th class="tb-hd-dimension">6</th>
-                                       <th class="tb-hd-dimension">7</th>
-                                       <th class="tb-hd-dimension">8</th>
-                                       <th class="tb-hd-dimension">9</th>
-                                       <th class="tb-hd-dimension">10</th>
-                                   </tr>
+                                    <tr>
+                                        <th class="tb-hd-estado">Estado</th>
+                                        <th class="tb-hd-dimension">1</th>
+                                        <th class="tb-hd-dimension">2</th>
+                                        <th class="tb-hd-dimension">3</th>
+                                        <th class="tb-hd-dimension">4</th>
+                                        <th class="tb-hd-dimension">5</th>
+                                        <th class="tb-hd-dimension">6</th>
+                                        <th class="tb-hd-dimension">7</th>
+                                        <th class="tb-hd-dimension">8</th>
+                                        <th class="tb-hd-dimension">9</th>
+                                        <th class="tb-hd-dimension">10</th>
+                                    </tr>
                                 </thead>
                                 <tbody id="tableBody">
-                                  
+
                                 </tbody>
-                          </table>
+                            </table>
                         </div>
+                        <div>
+                           
+                        </div>
+
                     </div>
                 </div>
                 <div id="vista-mapa" class="tabcontent">
@@ -153,7 +186,7 @@
                     <!-- Tab content evaluacion -->
                     <div id="vista-evaluacion" class="tabcontent-indi">
                         <div class="card background-lunder">
-            
+
                             <div class="div-card-info overflow-auto">
                                 <div class="div-datos-evaluacion">
                                     <p class="div-estado-evaluacion">Aguascalientes</p>

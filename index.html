@@ -19,19 +19,7 @@
 <link rel="stylesheet" href="Styles/body.css?v=002">
 <link rel="stylesheet" href="Styles/taps.css">
 <link rel="stylesheet" href="Styles/taps-evaluaciones.css">
-
-<!-- 08070 Contenedor del titulo y descripcion -->
-<div class="container-fluid">
-    <div class="card background-lunder">
-        <div class="card-body">
-            <p class="title-card">Clasificación de las Entidades Superiores de Fiscalización según sus avances</p>
-            <p class="subtitle-card">Se utilizó un análisis de conglomerados para evaluar las ESF y categorizarlas en
-                tres grupos: las más avanzadas, las que están en un punto intermedio y las que han progresado menos. Las
-                ESFL de mayor puntuación no necesariamente cumplen con todas las capacidades requeridas, simplemente
-                muestran un mayor desarrollo en comparación con las demás.</p>
-        </div>
-    </div>
-</div>
+<link rel="stylesheet" href="Styles/vista-tabla.css">
 
 <!-- 08070 Contenedor del panel de mapa y de indicadores -->
 <div class="container-fluid">
@@ -96,10 +84,28 @@
                 </div>
                 <!-- Tab content -->
                 <div id="vista-tabla" class="tabcontent">
-                    <h3>London</h3>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
+                    <div class="card background-lunder">
+                        <div class="panel-tabla overflow-auto">
+                            <table class="">
+                                <thead>
+                                   <tr>
+                                       <th class="tb-hd-estado">Estado</th>
+                                       <th class="tb-hd-dimension">1</th>
+                                       <th class="tb-hd-dimension">2</th>
+                                       <th class="tb-hd-dimension">3</th>
+                                       <th class="tb-hd-dimension">4</th>
+                                       <th class="tb-hd-dimension">5</th>
+                                       <th class="tb-hd-dimension">6</th>
+                                       <th class="tb-hd-dimension">7</th>
+                                       <th class="tb-hd-dimension">8</th>
+                                       <th class="tb-hd-dimension">9</th>
+                                       <th class="tb-hd-dimension">10</th>
+                                   </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                  
+                                </tbody>
+                          </table>
                         </div>
                     </div>
                 </div>
@@ -163,11 +169,12 @@
                     <div class="tap-panel-indi">
                         <!-- tab button formato -->
                         <div class="tab-buttons-indi">
-                            <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-evaluacion')"
-                                id="defaultOpen-indi">
+                            <button class="tablinks-indi formatt-button-indi"
+                                onclick="selectVista(event, 'vista-evaluacion')" id="defaultOpen-indi">
                                 Ver evaluación
                             </button>
-                            <button class="tablinks-indi formatt-button-indi" onclick="selectVista(event, 'vista-resumen')">
+                            <button class="tablinks-indi formatt-button-indi"
+                                onclick="selectVista(event, 'vista-resumen')">
                                 Ver resumen
                             </button>
                         </div>
@@ -186,4 +193,5 @@
 
 <footer>
     <script src="Acciones/taps.js"></script>
+    <script src="Acciones/table.js"></script>
 </footer>

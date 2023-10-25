@@ -1,0 +1,76 @@
+.panel-tabla {
+    height: 500px;
+}
+
+.div-title-estado {
+    height: 304px;
+}
+
+.div-btn-avance {
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+}
+
+.btn-avance-incipiente {
+    border-radius: 500px;
+    background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+}
+
+.btn-avance-intermedio {
+    border-radius: 500px;
+    background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+}
+
+.btn-avance-mayor {
+    border-radius: 500px;
+    background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+}
+
+.tb-hd-estado {
+    color: rgba(200.00000327825546, 204.00000303983688, 204.00000303983688, 1);
+    width: 304px;
+    height: 32px;
+    font-family: Roboto;
+    text-align: left;
+    font-size: 12px;
+}
+
+.tb-hd-dimension {
+    color: rgba(200.00000327825546, 204.00000303983688, 204.00000303983688, 1);
+    width: 40px;
+    height: 32px;
+    left: 16.5px;
+    top: 8px;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.row-estado {
+    color: rgba(255, 255, 255, 1);
+    width: 304px;
+    height: 40px;
+    top: 8px;
+    font-family: Roboto;
+    text-align: left;
+    font-size: 16px;
+}
+
+.row-dimension {
+    width: 40px;
+    height: 40px;
+}

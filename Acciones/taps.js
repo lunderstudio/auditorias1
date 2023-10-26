@@ -26,6 +26,7 @@ document.getElementById("defaultOpen").click();
 
 // Funct Tap Control Vista (evaluacion o resumen)
 function selectVista(evt, vista) {
+  btn_evaluacion_card(vista);
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -46,8 +47,9 @@ function selectVista(evt, vista) {
   evt.currentTarget.className += " active";
 }
 
-document.getElementById("defaultOpen-indi").click();
+document.getElementById("btn-ver-resumen").click();
 
+// Muestra y quita los dropdawns cuando seleccionas el formato de vista
 function dropdawn_element(format) {
   if (format === "vista-tabla") {
     document.getElementById("dropdawn-ordenamiento").style.display = "block";
@@ -55,5 +57,15 @@ function dropdawn_element(format) {
   } else if (format === "vista-mapa") {
     document.getElementById("dropdawn-ordenamiento").style.display = "none";
     document.getElementById("dropdawn-dimension").style.display = "block";
+  }
+}
+
+function btn_evaluacion_card(vista) {
+  if (vista === "vista-resumen") {
+    document.getElementById("btn-ver-resumen").style.display = "none";
+    document.getElementById("btn-ver-evaluacion").style.display = "block";
+  } else if (vista === "vista-evaluacion") {
+    document.getElementById("btn-ver-resumen").style.display = "block";
+    document.getElementById("btn-ver-evaluacion").style.display = "none";
   }
 }

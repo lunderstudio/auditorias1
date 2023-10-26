@@ -168,12 +168,8 @@ function fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension) {
     var _evaluaciones =
       `
     <div class="div-datos-evaluacion">
-      <p class="div-pregunta-evaluacion">` +
-      _titulo_indicador +
-      `</p>
-      <p class="div-respuesta-evaluacion">` +
-      _respuesta[_indicador] +
-      `</p>
+      <p class="div-pregunta-evaluacion">` +_titulo_indicador +`</p>
+      <p class="div-respuesta-evaluacion">` +_respuesta[_indicador] +`</p>
     </div>`;
     $("#resultados_evaluacion").append(_evaluaciones);
   });

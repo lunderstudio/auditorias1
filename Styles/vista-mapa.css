@@ -1,0 +1,91 @@
+.panel-mapa {
+    height: 535px;
+    border-style: solid;
+    border-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1) !important;
+    border-width: medium;
+}
+
+.hexa-size {
+    width: 65px;
+    margin: 6px;
+}
+
+.col-p1-position {
+    left: 20px;
+    top: 65px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p2-position {
+    left: 80px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+ 
+.col-p3-position {
+    left: 140px;
+    top: 65px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p4-position {
+    left: 200px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p5-position {
+    left: 260px;
+    top: 65px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p6-position {
+    left: 320px;
+    top: 100px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p7-position {
+    left: 380px;
+    top: 135px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p8-position {
+    left: 440px;
+    top: 375px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p9-position {
+    left: 500px;
+    top: 340px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.col-p10-position {
+    left: 560px;
+    top: 305px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}

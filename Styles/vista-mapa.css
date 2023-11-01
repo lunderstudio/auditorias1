@@ -65,7 +65,7 @@
 
 .col-p8-position {
     left: 440px;
-    top: 375px;
+    top: 380px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -73,7 +73,7 @@
 
 .col-p9-position {
     left: 500px;
-    top: 340px;
+    top: 345px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -81,8 +81,47 @@
 
 .col-p10-position {
     left: 560px;
-    top: 305px;
+    top: 310px;
     width: 30px;
     height: 30px;
     position: absolute;
 }
+
+.hexagon {
+    width: 55px;
+    height: 65px;
+    margin: 5px;
+    background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+  }
+
+  .lbl-estado{
+    top:45px;
+    left: 42px;
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    color: rgba(21, 21, 21, 1);
+    font-family: Roboto;
+    size: 12px;
+    margin: -25px 0 0 -25px;
+  }
+
+  .lbl-cdmx{
+    top:45px;
+    left: 33px;
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    color: rgba(21, 21, 21, 1);
+    font-family: Roboto;
+    size: 12px;
+    margin: -25px 0 0 -25px;
+  }
+
+  .box{
+    width: 65px;
+    height: 65px;
+    position: relative; 
+  }

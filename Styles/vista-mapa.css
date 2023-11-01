@@ -65,7 +65,7 @@
 
 .col-p8-position {
     left: 440px;
-    top: 380px;
+    top: 360px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -73,7 +73,7 @@
 
 .col-p9-position {
     left: 500px;
-    top: 345px;
+    top: 330px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -81,7 +81,7 @@
 
 .col-p10-position {
     left: 560px;
-    top: 310px;
+    top: 300px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -94,11 +94,11 @@
     background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     transform: rotate(90deg);
-  }
+}
 
-  .lbl-estado{
-    top:45px;
-    left: 42px;
+.lbl-estado {
+    top: 45px;
+    left: 37px;
     z-index: 2;
     display: inline-block;
     position: absolute;
@@ -106,11 +106,12 @@
     font-family: Roboto;
     size: 12px;
     margin: -25px 0 0 -25px;
-  }
+    transform: rotate(270deg);
+}
 
-  .lbl-cdmx{
-    top:45px;
-    left: 33px;
+.lbl-cdmx {
+    top: 45px;
+    left: 30px;
     z-index: 2;
     display: inline-block;
     position: absolute;
@@ -118,10 +119,27 @@
     font-family: Roboto;
     size: 12px;
     margin: -25px 0 0 -25px;
-  }
+    transform: rotate(270deg);
+}
 
-  .box{
+.box {
     width: 65px;
     height: 65px;
-    position: relative; 
-  }
+    position: relative;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: white !important;
+}
+
+.btn-check:hover+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: white !important;
+}

@@ -87,7 +87,25 @@
     position: absolute;
 }
 
-.hexagon {
+.radio-avance-incipiente {
+    width: 55px;
+    height: 65px;
+    margin: 5px;
+    background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+}
+
+.radio-avance-intermedio {
+    width: 55px;
+    height: 65px;
+    margin: 5px;
+    background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+}
+
+.radio-avance-mayor {
     width: 55px;
     height: 65px;
     margin: 5px;

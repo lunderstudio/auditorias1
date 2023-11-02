@@ -11,10 +11,10 @@ $(document).ready(function () {
     var _idEstado = this.getAttribute("data-idEstado");
     var _idAvance = this.getAttribute("data-idAvance");
     var _idDimension = this.getAttribute("data-idDimension");
-    console.log(
-      _idEdicion + " : " + _idEstado + " : " + _idAvance + " : ",
-      _idDimension
-    );
+
+    fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension);
+    fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension);
+    
   });
 });
 

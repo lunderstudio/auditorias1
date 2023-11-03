@@ -1,12 +1,9 @@
 $(document).ready(function () {
   addOptionSelect();
-
-//   $("#select-dimension").change(function () {
-//     $("#select-dimension").val($(this).val());
-//     // console.log($(this).val());
-//     cargar_dts_dimension()
-//   });
+  load_option_event_change();
 });
+
+// Rellena los dropdawns
 function addOptionSelect() {
   this.DatosDimensiones.forEach((option) => {
     $("#select-dimension").append(
@@ -14,5 +11,18 @@ function addOptionSelect() {
         ${option.Título} 
       </option>`
     );
+  });
+}
+
+// Agrega el evento a los dropdawns
+function load_option_event_change() {
+  $("#select-dimension").change(function () {
+    // var _value = $(this).val();
+    cargar_dts_dimension()
+  });
+  
+  $("#select-edicion").change(function () {
+    // var _value = $(this).val();
+    cargar_dts_dimension()
   });
 }

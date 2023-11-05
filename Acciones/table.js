@@ -5,117 +5,138 @@ const btn_color_avance = {
   "Mayor avance": "btn-avance-mayor",
 };
 
-// Generar Tabla Dinamica
-const table = document.getElementById("tableBody");
-DatosAvance.map((dimension) => {
-  let row = table.insertRow();
 
-  let estado = row.insertCell(0);
-  let dimension1 = row.insertCell(1);
-  let dimension2 = row.insertCell(2);
-  let dimension3 = row.insertCell(3);
-  let dimension4 = row.insertCell(4);
-  let dimension5 = row.insertCell(5);
-  let dimension6 = row.insertCell(6);
-  let dimension7 = row.insertCell(7);
-  let dimension8 = row.insertCell(8);
-  let dimension9 = row.insertCell(9);
-  let dimension10 = row.insertCell(10);
+function cargar_vista_tabla() {
+  var _idEdicion = $("#select-edicion option:selected").val();
+  this.clean_tabla();
+  // Generar Tabla Dinamica
+  const table = document.getElementById("tableBody");
+  //   Toma los datos de avance de la edicion
 
-  estado.innerHTML = DatosEstados.find(
-    (id) => id.IdEstado === dimension.IdEstado
-  ).Estado;
-  estado.className = "row-estado";
-
-  dimension1.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[1],
-    1
+  var _edicion_dimension = this.DatosAvance.filter(
+    (x) => x.IdEdicion == _idEdicion
   );
-  dimension1.className = "row-dimension";
 
-  dimension2.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[2],
-    2
-  );
-  dimension2.className = "row-dimension";
+  _edicion_dimension.map((dimension) => {
+    let row = table.insertRow();
 
-  dimension3.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[3],
-    3
-  );
-  dimension3.className = "row-dimension";
+    let estado = row.insertCell(0);
+    let dimension1 = row.insertCell(1);
+    let dimension2 = row.insertCell(2);
+    let dimension3 = row.insertCell(3);
+    let dimension4 = row.insertCell(4);
+    let dimension5 = row.insertCell(5);
+    let dimension6 = row.insertCell(6);
+    let dimension7 = row.insertCell(7);
+    let dimension8 = row.insertCell(8);
+    let dimension9 = row.insertCell(9);
+    let dimension10 = row.insertCell(10);
 
-  dimension4.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[4],
-    4
-  );
-  dimension4.className = "row-dimension";
+    estado.innerHTML = DatosEstados.find(
+      (id) => id.IdEstado === dimension.IdEstado
+    ).Estado;
+    estado.className = "row-estado";
 
-  dimension5.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[5],
-    5
-  );
-  dimension5.className = "row-dimension";
+    dimension1.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[1],
+      1
+    );
+    dimension1.className = "row-dimension";
 
-  dimension6.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[6],
-    6
-  );
-  dimension6.className = "row-dimension";
+    dimension2.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[2],
+      2
+    );
+    dimension2.className = "row-dimension";
 
-  dimension7.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[7],
-    7
-  );
-  dimension7.className = "row-dimension";
+    dimension3.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[3],
+      3
+    );
+    dimension3.className = "row-dimension";
 
-  dimension8.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[8],
-    8
-  );
-  dimension8.className = "row-dimension";
+    dimension4.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[4],
+      4
+    );
+    dimension4.className = "row-dimension";
 
-  dimension9.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[9],
-    9
-  );
-  dimension9.className = "row-dimension";
+    dimension5.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[5],
+      5
+    );
+    dimension5.className = "row-dimension";
 
-  dimension10.innerHTML = crear_botones(
-    dimension.IdEdicion,
-    dimension.IdEstado,
-    dimension[10],
-    10
-  );
-  dimension10.className = "row-dimension";
-});
+    dimension6.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[6],
+      6
+    );
+    dimension6.className = "row-dimension";
+
+    dimension7.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[7],
+      7
+    );
+    dimension7.className = "row-dimension";
+
+    dimension8.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[8],
+      8
+    );
+    dimension8.className = "row-dimension";
+
+    dimension9.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[9],
+      9
+    );
+    dimension9.className = "row-dimension";
+
+    dimension10.innerHTML = crear_botones(
+      dimension.IdEdicion,
+      dimension.IdEstado,
+      dimension[10],
+      10
+    );
+    dimension10.className = "row-dimension";
+  });
+}
 
 function crear_botones(idEdicion, idEstado, idAvance, IdDimension) {
   var _button =
     `<div class="div-btn-avance">
-      <button class="btn ` +btn_color_avance[idAvance] +`"
-        data-idEdicion="` +idEdicion +`" 
-        data-idEstado="` +idEstado +`" 
-        data-idAvance="` +idAvance +`" 
-        data-idDimension="` +IdDimension +`"
+      <button class="btn ` +
+    btn_color_avance[idAvance] +
+    `"
+        data-idEdicion="` +
+    idEdicion +
+    `" 
+        data-idEstado="` +
+    idEstado +
+    `" 
+        data-idAvance="` +
+    idAvance +
+    `" 
+        data-idDimension="` +
+    IdDimension +
+    `"
         onclick="select_dimencion(this)">
       </button></div>`;
   return _button;
@@ -168,12 +189,18 @@ function fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension) {
     var _evaluaciones =
       `
     <div class="div-datos-evaluacion">
-      <p class="div-pregunta-evaluacion">` +_titulo_indicador +`</p>
-      <p class="div-respuesta-evaluacion">` +_respuesta[_indicador] +`</p>
+      <p class="div-pregunta-evaluacion">` +
+      _titulo_indicador +
+      `</p>
+      <p class="div-respuesta-evaluacion">` +
+      _respuesta[_indicador] +
+      `</p>
     </div>`;
     $("#resultados_evaluacion").append(_evaluaciones);
   });
 }
 
-fill_card_evaluacion('1','1','Incipiente','1');
-fill_card_resumen('1','1','Incipiente','1');
+function clean_tabla() {
+  $("#tableBody").empty();
+}
+

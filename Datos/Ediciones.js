@@ -1,10 +1,10 @@
 var DatosEdiciones = [
     {
         "IdEdicion": "1",
-        "Edicion": "Primera Edicion"
+        "Edicion": "Primera"
     },
     {
         "IdEdicion": "2",
-        "Edicion": "Segun Edicion"
+        "Edicion": "Segunda"
     }
 ];

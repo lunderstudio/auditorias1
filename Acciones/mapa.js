@@ -4,11 +4,7 @@ const radio_color_avance = {
   "Mayor avance": "radio-avance-mayor",
 };
 
-$(document).ready(function () {
-  cargar_dts_dimension();
-});
-
-function cargar_dts_dimension() {
+function cargar_vista_mapa() {
   var _resultados_dimension = [];
   var _idEdicion = $("#select-edicion option:selected").val();
   var _idDimension = $("#select-dimension option:selected").val();

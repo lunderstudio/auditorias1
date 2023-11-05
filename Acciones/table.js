@@ -37,7 +37,7 @@ function cargar_vista_tabla() {
     ).Estado;
     estado.className = "row-estado";
 
-    dimension1.innerHTML = crear_botones(
+    dimension1.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[1],
@@ -45,7 +45,7 @@ function cargar_vista_tabla() {
     );
     dimension1.className = "row-dimension";
 
-    dimension2.innerHTML = crear_botones(
+    dimension2.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[2],
@@ -53,7 +53,7 @@ function cargar_vista_tabla() {
     );
     dimension2.className = "row-dimension";
 
-    dimension3.innerHTML = crear_botones(
+    dimension3.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[3],
@@ -61,7 +61,7 @@ function cargar_vista_tabla() {
     );
     dimension3.className = "row-dimension";
 
-    dimension4.innerHTML = crear_botones(
+    dimension4.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[4],
@@ -69,7 +69,7 @@ function cargar_vista_tabla() {
     );
     dimension4.className = "row-dimension";
 
-    dimension5.innerHTML = crear_botones(
+    dimension5.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[5],
@@ -77,7 +77,7 @@ function cargar_vista_tabla() {
     );
     dimension5.className = "row-dimension";
 
-    dimension6.innerHTML = crear_botones(
+    dimension6.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[6],
@@ -85,7 +85,7 @@ function cargar_vista_tabla() {
     );
     dimension6.className = "row-dimension";
 
-    dimension7.innerHTML = crear_botones(
+    dimension7.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[7],
@@ -93,7 +93,7 @@ function cargar_vista_tabla() {
     );
     dimension7.className = "row-dimension";
 
-    dimension8.innerHTML = crear_botones(
+    dimension8.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[8],
@@ -101,7 +101,7 @@ function cargar_vista_tabla() {
     );
     dimension8.className = "row-dimension";
 
-    dimension9.innerHTML = crear_botones(
+    dimension9.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[9],
@@ -109,7 +109,7 @@ function cargar_vista_tabla() {
     );
     dimension9.className = "row-dimension";
 
-    dimension10.innerHTML = crear_botones(
+    dimension10.innerHTML = crear_btns_tabl(
       dimension.IdEdicion,
       dimension.IdEstado,
       dimension[10],
@@ -119,30 +119,21 @@ function cargar_vista_tabla() {
   });
 }
 
-function crear_botones(idEdicion, idEstado, idAvance, IdDimension) {
+function crear_btns_tabl(idEdicion, idEstado, idAvance, IdDimension) {
   var _button =
     `<div class="div-btn-avance">
       <button class="btn ` +
-    btn_color_avance[idAvance] +
-    `"
-        data-idEdicion="` +
-    idEdicion +
-    `" 
-        data-idEstado="` +
-    idEstado +
-    `" 
-        data-idAvance="` +
-    idAvance +
-    `" 
-        data-idDimension="` +
-    IdDimension +
-    `"
-        onclick="select_dimencion(this)">
-      </button></div>`;
+    btn_color_avance[idAvance] + `"data-idEdicion="` +
+    idEdicion + `"data-idEstado="` +
+    idEstado + `"data-idAvance="` +
+    idAvance + `"data-idDimension="` +
+    IdDimension + `"onclick="select_estado_dimension(this)">
+      </button>
+    </div>`;
   return _button;
 }
 
-function select_dimencion(data) {
+function select_estado_dimension(data) {
   var _idEdicion = data.getAttribute("data-idEdicion");
   var _idEstado = data.getAttribute("data-idEstado");
   var _idAvance = data.getAttribute("data-idAvance");
@@ -186,8 +177,7 @@ function fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension) {
     );
 
     $("#evaluacion_estdo").text(_estado);
-    var _evaluaciones =
-      `
+    var _evaluaciones = `
     <div class="div-datos-evaluacion">
       <p class="div-pregunta-evaluacion">` +
       _titulo_indicador +

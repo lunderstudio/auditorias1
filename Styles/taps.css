@@ -281,3 +281,9 @@
 	letter-spacing:0;
 	line-height:px;
 }
+
+.encabezados-lbl{
+	color: rgba(200.00000327825546, 204.00000303983688, 204.00000303983688, 1);
+	font-family: Roboto;
+	font-size: 12px;
+}

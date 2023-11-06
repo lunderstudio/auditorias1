@@ -16,7 +16,6 @@ function cargar_vista_mapa() {
 
   // Valida si hay datos iIEdicion y IdDimension
   this.clean_mapa();
-  this.clean_cards();
   //   Toma los datos de la dimension seleccionada [Array]
   _resultados_dimension.forEach((dimension) => {
     var _Abrev = this.DatosEstados.find(
@@ -45,6 +44,9 @@ function load_map_event_change() {
     var _idEstado = this.getAttribute("data-idEstado");
     var _idAvance = this.getAttribute("data-idAvance");
     var _idDimension = this.getAttribute("data-idDimension");
+
+    localStorage.setItem("_estado", _idEstado);
+    localStorage.setItem("_avance", _idAvance);
 
     fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension);
     fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension);
@@ -79,13 +81,4 @@ function clean_mapa() {
   this.DatosEstados.forEach((estado) => {
     $("#radio-" + estado.Abrev).empty();
   });
-}
-
-function clean_cards(){
-  $("#resumen_estado").text('Seleccione un Indicador.');
-  $("#resumen_titulo_dimension").text('Sin seleccion');
-  $("#resumen_avance_dimension").text('Sin seleccion');
-  $("#resumen_desc_dimension").text('');
-  $("#evaluacion_estdo").text('Seleccione un Indicador.');
-  $("#resultados_evaluacion").empty();
 }

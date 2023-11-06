@@ -193,4 +193,3 @@ function fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension) {
 function clean_tabla() {
   $("#tableBody").empty();
 }
-

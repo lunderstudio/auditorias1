@@ -1,7 +1,7 @@
 // Func Tap Control Formato
 function selectFormat(evt, format) {
   dropdawn_element(format);
-
+  clean_cards();
   // Declare all variables
   var i, tabcontent, tablinks;
 

@@ -1,6 +1,6 @@
 // Func Tap Control Formato
 function selectFormat(evt, format) {
-  dropdawn_element(format);
+  hide_show_dropdawn(format);
   clean_cards();
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -50,7 +50,7 @@ function selectVista(evt, vista) {
 document.getElementById("btn-ver-resumen").click();
 
 // Muestra y quita los dropdawns cuando seleccionas el formato de vista
-function dropdawn_element(format) {
+function hide_show_dropdawn(format) {
   if (format === "vista-tabla") {
     document.getElementById("dropdawn-ordenamiento").style.display = "block";
     document.getElementById("dropdawn-dimension").style.display = "none";

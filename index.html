@@ -33,11 +33,11 @@
                         <div class="text-center">
                             <label class="encabezados-lbl">Formato</label>
                         </div>
-                        <button class="tablinks formatt-button" onclick="selectFormat(event, 'vista-tabla')" id="defaultOpen">
-                            <img class="img_size" src="src/esf_icon_list_default.svg" alt="">
+                        <button class="tablinks formatt-button" onclick="select_vista(event, 'vista-tabla')" id="defaultOpen">
+                            <img id="img_tabla" class="img_size" src="src/tabla_default.svg" alt="">
                         </button>
-                        <button class="tablinks formatt-button" onclick="selectFormat(event, 'vista-mapa')">
-                            <img class="img_size" src="src/esf_icon_map_default.svg" alt="">
+                        <button class="tablinks formatt-button" onclick="select_vista(event, 'vista-mapa')">
+                            <img id="img_mapa" class="img_size" src="src/map_default.svg" alt="">
                         </button>
                     </div>
                     <!-- Tap Dropdown Edicion -->
@@ -288,11 +288,11 @@
                         <!-- tab button formato -->
                         <div class="d-grid gap-2 tab-buttons-indi">
                             <button class="tablinks-indi formatt-button-indi"
-                                onclick="selectVista(event, 'vista-resumen')" id="btn-ver-resumen" type="button">
+                                onclick="select_card(event, 'vista-resumen')" id="btn-ver-resumen" type="button">
                                 Ver resumen
                             </button>
                             <button class="tablinks-indi formatt-button-indi"
-                                onclick="selectVista(event, 'vista-evaluacion')" id="btn-ver-evaluacion" type="button">
+                                onclick="select_card(event, 'vista-evaluacion')" id="btn-ver-evaluacion" type="button">
                                 Ver evaluación
                             </button>
                         </div>

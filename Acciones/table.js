@@ -5,9 +5,9 @@ const btn_color_avance = {
   "Mayor avance": "btn-avance-mayor",
 };
 
-
 function cargar_vista_tabla() {
   var _idEdicion = $("#select-edicion option:selected").val();
+  var _ordenamiento = $("#select-ordenamiento option:selected").val();
   this.clean_tabla();
   // Generar Tabla Dinamica
   const table = document.getElementById("tableBody");
@@ -17,106 +17,32 @@ function cargar_vista_tabla() {
     (x) => x.IdEdicion == _idEdicion
   );
 
-  _edicion_dimension.map((dimension) => {
-    let row = table.insertRow();
+  if (_edicion_dimension.length > 0) {
+    DatosEstados.forEach((estado) => {
+      var _index = estado[_ordenamiento] - 1;
+      var _idEstado = DatosEstados[_index].IdEstado - 1;
+      var _estado = DatosEstados[_index].Estado;
+      var _dimension = _edicion_dimension[_idEstado];
 
-    let estado = row.insertCell(0);
-    let dimension1 = row.insertCell(1);
-    let dimension2 = row.insertCell(2);
-    let dimension3 = row.insertCell(3);
-    let dimension4 = row.insertCell(4);
-    let dimension5 = row.insertCell(5);
-    let dimension6 = row.insertCell(6);
-    let dimension7 = row.insertCell(7);
-    let dimension8 = row.insertCell(8);
-    let dimension9 = row.insertCell(9);
-    let dimension10 = row.insertCell(10);
-
-    estado.innerHTML = DatosEstados.find(
-      (id) => id.IdEstado === dimension.IdEstado
-    ).Estado;
-    estado.className = "row-estado";
-
-    dimension1.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[1],
-      1
-    );
-    dimension1.className = "row-dimension";
-
-    dimension2.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[2],
-      2
-    );
-    dimension2.className = "row-dimension";
-
-    dimension3.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[3],
-      3
-    );
-    dimension3.className = "row-dimension";
-
-    dimension4.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[4],
-      4
-    );
-    dimension4.className = "row-dimension";
-
-    dimension5.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[5],
-      5
-    );
-    dimension5.className = "row-dimension";
-
-    dimension6.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[6],
-      6
-    );
-    dimension6.className = "row-dimension";
-
-    dimension7.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[7],
-      7
-    );
-    dimension7.className = "row-dimension";
-
-    dimension8.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[8],
-      8
-    );
-    dimension8.className = "row-dimension";
-
-    dimension9.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[9],
-      9
-    );
-    dimension9.className = "row-dimension";
-
-    dimension10.innerHTML = crear_btns_tabl(
-      dimension.IdEdicion,
-      dimension.IdEstado,
-      dimension[10],
-      10
-    );
-    dimension10.className = "row-dimension";
-  });
+      let row = table.insertRow();
+      // For para crear 11 celdas
+      for (let index = 0; index <= 10; index++) {
+        if (index === 0) {
+          let name_estado = row.insertCell(index);
+          name_estado.innerHTML = _estado;
+          name_estado.className = "row-estado";
+        } else {
+          let dimension = row.insertCell(index);
+          dimension.innerHTML = crear_btns_tabl(
+            _dimension.IdEdicion,
+            _dimension.IdEstado,
+            _dimension[index],
+            index
+          );
+        }
+      }
+    });
+  }
 }
 
 function crear_btns_tabl(idEdicion, idEstado, idAvance, IdDimension) {
@@ -148,7 +74,7 @@ function fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension) {
   var _desc_dimension = DatosDimensiones.find(
     (id) => id.IdDimension === _idDimension
   );
-  var _dimension_titulo = _desc_dimension.Título;
+  var _dimension_titulo = _desc_dimension.IdDimension + " " + _desc_dimension.Título;
   var _dimension_desc = _desc_dimension.Descripción;
 
   $("#resumen_estado").text(_estado);

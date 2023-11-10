@@ -13,7 +13,7 @@ function cargar_dropdawns() {
   this.DatosDimensiones.forEach((option) => {
     $("#select-dimension").append(
       `<option value="${option.IdDimension}">
-        ${option.Título} 
+        ${option.IdDimension} ${option.Título} 
       </option>`
     );
   });
@@ -49,6 +49,11 @@ function load_option_event_change() {
       clean_cards();
 
     cargar_vista_mapa();
+    cargar_vista_tabla();
+  });
+
+   // Avento change Ordenamiento
+   $("#select-ordenamiento").change(function () {
     cargar_vista_tabla();
   });
 }

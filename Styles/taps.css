@@ -1,16 +1,14 @@
 /* Style the tab */
 .tap-panel {
   overflow: hidden;
-  /* background-color: #ccc; */
 }
 
 .tab-buttons {
   float: left;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  height: 66px; 
+  padding-left: calc(var(--bs-gutter-x) * .3);
   margin-right: auto;
   margin-left: auto;
-  /* background-color: #ccc; */
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -22,14 +20,13 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  color: rgba(255, 255, 255, 1);
 }
 
 /* Style Tap Dropdown  */
 .tab-dropdown {
   float: left;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  height: 66px;
+  padding-left: calc(var(--bs-gutter-x) * .3);
   margin-right: auto;
   margin-left: auto;
 }

@@ -1,5 +1,5 @@
 .panel-mapa {
-    height: 535px;
+    height: 500px;
 }
 
 .hexa-size {
@@ -112,6 +112,39 @@
     background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     transform: rotate(90deg);
+}
+
+.radio-lbl-incipiente {
+    width: 40px;
+    height: 45px;
+    background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+}
+
+.radio-lbl-intermedio {
+    width: 40px;
+    height: 45px;
+    background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+}
+
+.radio-lbl-mayor {
+    width: 40px;
+    height: 45px;
+    background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    transform: rotate(90deg);
+}
+
+.hexa-lbl-indicadores{
+    color: rgba(200, 204, 204, 1);
+	position: relative;
+	font-family: Roboto;
+	font-size: 14px;
+	top: 12px;
+	left: 12px;
 }
 
 .lbl-estado {

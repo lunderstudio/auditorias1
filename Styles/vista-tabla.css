@@ -18,8 +18,15 @@
     background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
     width: 32px;
     height: 32px;
-    left: 4px;
-    top: 4px;
+}
+
+.btn-avance-incipiente:hover{
+    background-color: white;
+}
+.btn-avance-incipiente:active .btn.active {
+/* .btn-avance-incipiente:active{ */
+    background-color: white;
+    border: 3px solid black ;
 }
 
 .btn-avance-intermedio {
@@ -27,8 +34,15 @@
     background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
     width: 32px;
     height: 32px;
-    left: 4px;
-    top: 4px;
+}
+
+.btn-avance-intermedio:hover{
+    background-color: white;
+}
+
+.btn-avance-intermedio:active{
+    background-color: white;
+    border: 3px solid black !important;
 }
 
 .btn-avance-mayor {
@@ -36,8 +50,15 @@
     background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
     width: 32px;
     height: 32px;
-    left: 4px;
-    top: 4px;
+}
+
+.btn-avance-mayor:hover{
+    background-color: white;
+}
+
+.btn-avance-mayor:active{
+    background-color: white;
+    border: 2px solid black !important;
 }
 
 .tb-hd-estado {

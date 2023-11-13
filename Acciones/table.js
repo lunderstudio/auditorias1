@@ -53,13 +53,16 @@ function crear_btns_tabl(idEdicion, idEstado, idAvance, IdDimension) {
     idEdicion + `"data-idEstado="` +
     idEstado + `"data-idAvance="` +
     idAvance + `"data-idDimension="` +
-    IdDimension + `"onclick="select_estado_dimension(this)">
+    IdDimension + `"onclick="select_estado_dimension(event,this)">
       </button>
     </div>`;
   return _button;
 }
 
-function select_estado_dimension(data) {
+function select_estado_dimension(event, data) {
+  $(".div-btn-avance button").removeClass("active");
+  event.currentTarget.className += " active";
+  
   var _idEdicion = data.getAttribute("data-idEdicion");
   var _idEstado = data.getAttribute("data-idEstado");
   var _idAvance = data.getAttribute("data-idAvance");

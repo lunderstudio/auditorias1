@@ -38,10 +38,14 @@ function cargar_vista_mapa() {
 }
 
 function load_map_event_change() {
-  $("input[type=radio][name=options-base]").change(function () {
+  $("input[type=radio][name=options-base]").change(function (event) {
+    event.stopImmediatePropagation();
+    $(".box label").removeClass("active");
+    
+    var _idEstado = this.getAttribute("data-idEstado");
+    $("#lbl-" + _idEstado).addClass("active");
 
     var _idEdicion = this.getAttribute("data-idEdicion");
-    var _idEstado = this.getAttribute("data-idEstado");
     var _idAvance = this.getAttribute("data-idAvance");
     var _idDimension = this.getAttribute("data-idDimension");
 
@@ -66,7 +70,9 @@ function generar_radio_btns(idEdicion, idEstado, Abrev, idAvance, IdDimension) {
     idAvance +
     `" data-idDimension="` +
     IdDimension +
-    `"><label class="btn ` +
+    `"><label id="lbl-` +
+    idEstado +
+    `" class="btn hexagono ` +
     radio_color_avance[idAvance] +
     `" for="opt-` +
     Abrev +

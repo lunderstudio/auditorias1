@@ -87,31 +87,24 @@
     position: absolute;
 }
 
-.radio-avance-incipiente {
+.hexagono {
     width: 55px;
     height: 65px;
     margin: 5px;
-    background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     transform: rotate(90deg);
+}
+
+.radio-avance-incipiente {
+    background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
 }
 
 .radio-avance-intermedio {
-    width: 55px;
-    height: 65px;
-    margin: 5px;
     background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    transform: rotate(90deg);
 }
 
 .radio-avance-mayor {
-    width: 55px;
-    height: 65px;
-    margin: 5px;
     background-color: rgba(243.00000071525574, 126.00000008940697, 121.00000038743019, 1);
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    transform: rotate(90deg);
 }
 
 .radio-lbl-incipiente {
@@ -177,20 +170,4 @@
     width: 65px;
     height: 65px;
     position: relative;
-}
-
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
-    background-color: white !important;
-}
-
-.btn-check:hover+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
-    background-color: white !important;
 }

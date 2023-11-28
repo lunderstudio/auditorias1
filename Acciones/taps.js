@@ -81,6 +81,8 @@ function change_img(vista) {
   }
   localStorage.removeItem("_edicion");
   localStorage.removeItem("_estado");
+
+  $(".box label").removeClass("active");
 }
 
 function descargar_ficha(){

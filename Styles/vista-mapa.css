@@ -99,6 +99,16 @@
     background-color: rgba(252.00000017881393, 224.000001847744, 221.00000202655792, 1);
 }
 
+.box label.active{
+    background-color: #6A302F;
+    color: white;
+}
+
+.box label:hover{
+    background-color: #6A302F;
+    color: white;
+}
+
 .radio-avance-intermedio {
     background-color: rgba(248.0000004172325, 176.00000470876694, 168.0000051856041, 1);
 }

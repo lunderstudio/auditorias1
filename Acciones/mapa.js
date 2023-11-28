@@ -40,6 +40,7 @@ function cargar_vista_mapa() {
 function load_map_event_change() {
   $("input[type=radio][name=options-base]").change(function (event) {
     event.stopImmediatePropagation();
+    
     $(".box label").removeClass("active");
     
     var _idEstado = this.getAttribute("data-idEstado");
@@ -73,7 +74,7 @@ function generar_radio_btns(idEdicion, idEstado, Abrev, idAvance, IdDimension) {
     IdDimension +
     `"><label id="lbl-` +
     idEstado +
-    `" class="btn hexagono ` +
+    `" class=" hexagono ` +
     radio_color_avance[idAvance] +
     `" for="opt-` +
     Abrev +

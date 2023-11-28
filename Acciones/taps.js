@@ -79,4 +79,22 @@ function change_img(vista) {
     $("#img_tabla").attr("src", "src/tabla_default.svg");
     $("#img_mapa").attr("src", "src/map_active.svg");
   }
+  localStorage.removeItem("_edicion");
+  localStorage.removeItem("_estado");
+}
+
+function descargar_ficha(){
+  var _idEdicion = localStorage.getItem("_edicion");
+  var _idEstado = localStorage.getItem("_estado");
+
+  if(_idEstado != null){
+    link = DatosFichas.find(
+      (x) =>
+        x.idEdicion == _idEdicion &&
+        x.idEstado == _idEstado
+    );
+    if(link.vinculo != "null")
+      window.open(link.vinculo);
+    
+  }
 }

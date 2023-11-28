@@ -68,6 +68,10 @@ function select_estado_dimension(event, data) {
   var _idAvance = data.getAttribute("data-idAvance");
   var _idDimension = data.getAttribute("data-idDimension");
 
+  localStorage.setItem("_edicion", _idEdicion);
+  localStorage.setItem("_estado", _idEstado);
+  localStorage.setItem("_avance", _idAvance);
+
   fill_card_resumen(_idEdicion, _idEstado, _idAvance, _idDimension);
   fill_card_evaluacion(_idEdicion, _idEstado, _idAvance, _idDimension);
 }

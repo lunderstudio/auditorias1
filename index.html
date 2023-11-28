@@ -11,6 +11,7 @@
 <script src="Datos/Indicadores.js"></script>
 <script src="Datos/AvanceDimensiones.js"></script>
 <script src="Datos/Resultados.js"></script>
+<script src="Datos/FichasTecnicas.js"></script>
 
 <!-- Styles -->
 <link rel="stylesheet" href="Styles/body.css?v=002">
@@ -313,8 +314,10 @@
                 </div>
                 <div class="div-buttons-fichas">
                     <div class="d-grid gap-2">
-                        <button class="btn btn-descarga" type="button">Descargar ficha</button>
-                        <button class="btn btn-fichas" type="button">Ver todas las fichas</button>
+                        <button class="btn btn-descarga" type="button" onclick="descargar_ficha()">Descargar ficha</button>
+                        <button class="btn btn-fichas" type="button">
+                            <a style="color: white;" href="https://drive.google.com/drive/folders/1d020dGmkwcv1md9ehsyieB7Adv0cJWDY?usp=share_link" target="_blank" rel="noopener noreferrer">Ver todas las fichas</a>
+                        </button>
                     </div>
                 </div>
             </div>

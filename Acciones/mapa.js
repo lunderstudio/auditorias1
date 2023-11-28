@@ -49,6 +49,7 @@ function load_map_event_change() {
     var _idAvance = this.getAttribute("data-idAvance");
     var _idDimension = this.getAttribute("data-idDimension");
 
+    localStorage.setItem("_edicion", _idEdicion);
     localStorage.setItem("_estado", _idEstado);
     localStorage.setItem("_avance", _idAvance);
 

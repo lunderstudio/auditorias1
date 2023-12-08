@@ -112,12 +112,12 @@ var DatosFichas = [
     {
         "idEdicion": "1",
         "idEstado": "23",
-        "vinculo": "null"
+        "vinculo": "https://docs.google.com/document/d/1oXb0pRGyEjnY9Y6f-9Tc53GH5jD50Qou/edit?usp=drive_link&rtpof=true&sd=true"
     },
     {
         "idEdicion": "1",
         "idEstado": "24",
-        "vinculo": "null"
+        "vinculo": "https://docs.google.com/document/d/1qvR_oQ8XmvuWI4LvFnlpeOylM3npnEYj/edit?usp=drive_link&rtpof=true&sd=true"
     },
     {
         "idEdicion": "1",
